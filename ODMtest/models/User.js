@@ -2,7 +2,8 @@ const { Schema, model } = require('mongoose')
 
 const userSchema = new Schema({
     name: String,
-    phone: String
+    phone: String,
+    todos: [{ type: Schema.Types.ObjectId, ref: 'Todo' }]
 }, {
     timestamps: true
 });
